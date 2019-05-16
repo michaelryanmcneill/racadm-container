@@ -2,8 +2,14 @@
 
 ## Why?
 
-So I can make changes to iDRACs everywhere from my MacBook.
+So I can make changes to iDRACs everywhere.
 
 ## Usage
 
-docker run -it justinclayton/racadm -r <ip> -u <user> -p <pass> <command> [args...]
+```
+docker build -t eminguez/racadm
+docker run -it eminguez/racadm -r <ip> -u <user> -p <pass> <command> [args...]
+```
+
+## References
+Forked from https://github.com/justinclayton/docker-racadm

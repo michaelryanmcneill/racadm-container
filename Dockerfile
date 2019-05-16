@@ -1,4 +1,4 @@
-FROM centos:centos6
+FROM registry.centos.org/centos/centos:centos7
 
 RUN yum install -y wget perl openssl-devel
 RUN wget -q -O - http://linux.dell.com/repo/hardware/latest/bootstrap.cgi | bash
