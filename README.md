@@ -7,8 +7,8 @@ So I can make changes to iDRACs everywhere.
 ## Usage
 
 ```
-docker build -t eminguez/racadm
-docker run -it eminguez/racadm -r <ip> -u <user> -p <pass> <command> [args...]
+podman build -t eminguez/racadm
+podman run -it eminguez/racadm -r <ip> -u <user> -p <pass> <command> [args...]
 ```
 
 ## References
