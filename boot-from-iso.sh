@@ -25,7 +25,7 @@ if [[ $# -lt 7 ]]; then
 	usage "Insufficient number of parameters"
 fi
 
-while getopts vdrbh:u:p:i: option; do
+while getopts vdrb:h:u:p:i: option; do
 	case "${option}" in
 	v)
 		VERSION="TRUE"
