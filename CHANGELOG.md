@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/iranzo/racadm-container/compare/1.0.0...1.0.1) (2021-04-30)
+
+### Bug Fixes
+
+- **Dockerfile:** updates package and binary name on DELL repo ([5a76c2e](https://github.com/iranzo/racadm-container/commit/5a76c2e98aceb8156231954c730e94248bd97c30))
+
 # 1.0.0 (2021-04-30)
 
 ### Features
