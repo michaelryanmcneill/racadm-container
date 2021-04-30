@@ -1,3 +1,14 @@
+# [1.1.0](https://github.com/iranzo/racadm-container/compare/1.0.1...1.1.0) (2021-04-30)
+
+### Bug Fixes
+
+- **boot-from-iso.h:** fix processing of command ([a30b976](https://github.com/iranzo/racadm-container/commit/a30b9766b99c5b9138f42e99fb2d7b6e7c17b4d2))
+- **Dockerfile:** adds dmidecode dependency ([95ecdf6](https://github.com/iranzo/racadm-container/commit/95ecdf6bdcb3d78591c318b0a148ebcb297c14bf))
+
+### Features
+
+- change entrypoint to do more processing ([c19115d](https://github.com/iranzo/racadm-container/commit/c19115d6ad964b650a52a029731ace18de12ae2f))
+
 # 1.0.0 (2021-04-30)
 
 ### Bug Fixes
