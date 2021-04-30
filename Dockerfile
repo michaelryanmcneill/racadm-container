@@ -1,8 +1,13 @@
-FROM registry.centos.org/centos/centos:centos7
+FROM centos
 
-RUN yum install -y wget perl openssl-devel
-RUN wget -q -O - http://linux.dell.com/repo/hardware/latest/bootstrap.cgi | bash
+COPY bootstrap.cgi /tmp/
 
-RUN yum install -y srvadmin-idracadm7 dmidecode
+RUN yum -y update \
+ && yum -y install openssl openssl-devel pciutils wget \
+ && bash /tmp/bootstrap.cgi \
+ && yum install -y srvadmin-idracadm7.x86_64 -y \
+ && yum -y clean all
 
-ENTRYPOINT ["/opt/dell/srvadmin/bin/idracadm7"]
+COPY boot-from-iso.sh /boot-from-iso.sh
+#ENTRYPOINT ["/opt/dell/srvadmin/bin/idracadm7"]
+ENTRYPOINT ["/boot-from-iso.sh"]

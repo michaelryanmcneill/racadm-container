@@ -13,4 +13,4 @@ podman run -it iranzo/racadm -r <ip> -u <user> -p <pass> <command> [args...]
 
 ## References
 
-Forked from https://github.com/eminguez/docker-racadm
+Forked from https://github.com/dav1x/racadm-image
