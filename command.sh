@@ -3,7 +3,7 @@ set -eoE pipefail
 
 usage() {
 	echo "${@}"
-	echo "Usage: $0 [-v] [-d] [-r] [-b] -h idrac-hostname -u user -p password -i http://iso-url" 1>&2
+	echo "Usage: ${0} [-v] [-d] [-r] [-b] -h idrac-hostname -u user -p password -i iso-url" 1>&2
 	exit 1
 }
 

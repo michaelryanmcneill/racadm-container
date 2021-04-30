@@ -19,6 +19,8 @@
     "Dockerfile",
     "yaspeller.json",
     "dmidecode",
-    "entrypoint"
+    "entrypoint",
+    "boot-from-iso",
+    "iso"
   ]
 }
