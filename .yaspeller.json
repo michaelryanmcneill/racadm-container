@@ -17,6 +17,7 @@
     "RACADM",
     "iDRACs",
     "Dockerfile",
-    "yaspeller.json"
+    "yaspeller.json",
+    "dmidecode"
   ]
 }
