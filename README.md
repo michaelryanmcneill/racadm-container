@@ -8,7 +8,7 @@ So I can make changes to iDRACs everywhere.
 
 ```
 podman build -t iranzo/racadm
-podman run -it iranzo/racadm -r <ip> -u <user> -p <pass> <command> [args...]
+podman run -it iranzo/racadm -h <ip> -u <user> -p <pass> <command> [args...]
 ```
 
 ## References

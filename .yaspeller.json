@@ -21,6 +21,7 @@
     "dmidecode",
     "entrypoint",
     "boot-from-iso",
-    "iso"
+    "iso",
+    "racadm"
   ]
 }

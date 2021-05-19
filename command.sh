@@ -18,8 +18,8 @@ runcommand() {
 }
 clearvd() {
 	echo '******* Initializing virtual disk to ensure clean boot to ISO *******'
-	/opt/dell/srvadmin/bin/idracadm7 --nocertwarn -h ${HOST} -u ${USER} -p ${PASSWORD} storage init:Disk.Virtual.0:RAID.Integrated.1-1 -speed fast
-	/opt/dell/srvadmin/bin/idracadm7 --nocertwarn -h ${HOST} -u ${USER} -p ${PASSWORD} jobqueue create RAID.Integrated.1-1 -s TIME_NOW
+	/opt/dell/srvadmin/bin/idracadm7 --nocertwarn -r ${HOST} -u ${USER} -p ${PASSWORD} storage init:Disk.Virtual.0:RAID.Integrated.1-1 -speed fast
+	/opt/dell/srvadmin/bin/idracadm7 --nocertwarn -r ${HOST} -u ${USER} -p ${PASSWORD} jobqueue create RAID.Integrated.1-1 -s TIME_NOW
 }
 if [[ $# -lt 7 ]]; then
 	usage "Insufficient number of parameters"
