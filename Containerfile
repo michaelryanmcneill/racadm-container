@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi9/ubi
+FROM rhel9
 
 ## @note LEGACY crypto policy is required because Dell signs OMSA packages with a SHA-1 key. More details on RHEL 9 deprecating SHA-1 for signing by default here: https://www.redhat.com/en/blog/rhel-security-sha-1-package-signatures-distrusted-rhel-9
 
