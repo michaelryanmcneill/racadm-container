@@ -9,7 +9,7 @@ RUN rm -rf /etc/rhsm-host \
     && bash /tmp/bootstrap.cgi \
     && update-crypto-policies --set LEGACY \
     && dnf -y update \
-    && dnf -y install openssl openssl-devel pciutils wget ipmitool \
+    && dnf -y install openssl openssl-devel pciutils wget ipmitool cmp \
     && dnf -y install srvadmin-idracadm7.x86_64 \
     && dnf -y clean all \
     && update-crypto-policies --set DEFAULT \

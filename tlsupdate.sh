@@ -8,7 +8,7 @@ RACADM_COMMAND="${RACADM_BINARY} -r ${IPMI_HOSTNAME} -u ${IMPI_USER} -p ${IPMI_P
 
 if [[ -z ${IPMI_HOSTNAME} || -z ${IPMI_USER} || -z ${IPMI_PASSWORD} || -z ${IPMI_PORT} ]]; then echo "Missing one or more environment variables" && exit 1; fi
 
-if [ ! -f /run/secrets/idrac/tls.crt || ! -f /run/secrets/idrac/tls.key ]; then echo "TLS certificate or key missing" && exit 1; fi
+if [[ ! -f /run/secrets/idrac/tls.crt || ! -f /run/secrets/idrac/tls.key ]]; then echo "TLS certificate or key missing" && exit 1; fi
 
 openssl s_client -showcerts -verify 5 -connect ${IMPI_HOSTNAME}:${IPMI_PORT} < /dev/null | sed --quiet '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > /tmp/live-tls.crt
 
