@@ -1,12 +1,4 @@
 #!/bin/bash
-#
-# $Id: dellfanctl,v 1.11 2019/06/22 02:35:31 root Exp root $
-#
-# dellfanctl : Reconfigure LSI cache behaviour upon boot/shutdown
-#
-# chkconfig: 2345 75 02
-# description:	Enables manual IPMI Dell Fan control after boot
-#
 
 MAX_TEMP=77
 GOOD_MSG="(II) Dell Fan Control"
