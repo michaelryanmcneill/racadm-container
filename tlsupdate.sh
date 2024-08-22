@@ -2,9 +2,9 @@
 
 IPMI_PORT=443
 RACADM_BINARY=/opt/dell/srvadmin/bin/idracadm7
-RACADM_COMMAND="${RACADM_BINARY} -r ${IPMI_HOSTNAME} -u ${IMPI_USER} -p ${IPMI_PASSWORD}"
+RACADM_COMMAND="${RACADM_BINARY} -r ${IPMI_HOSTNAME} -u ${IPMI_USER} -p ${IPMI_PASSWORD}"
 
-#if [ ! -x ${RACADM_BINARY} ]; then echo "${RACADM_BINARY} doesn't have execute permissions" && exit 1; fi
+if [ ! -x ${RACADM_BINARY} ]; then echo "${RACADM_BINARY} doesn't have execute permissions" && exit 1; fi
 
 if [[ -z ${IPMI_HOSTNAME} || -z ${IPMI_USER} || -z ${IPMI_PASSWORD} || -z ${IPMI_PORT} ]]; then echo "Missing one or more environment variables" && exit 1; fi
 
