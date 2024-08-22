@@ -5,11 +5,11 @@ GOOD_MSG="(II) Dell Fan Control"
 
 IPMI_BINARY=/usr/bin/ipmitool
 IPMI_PASSWORD_FILE=/run/secrets/idrac/token
-IPMI_COMMAND="${IPMI_BINARY} -H ${IPMI_HOST} -I lanplus -U ${IPMI_USER} -f ${IPMI_PASSWORD_FILE}"
+IPMI_COMMAND="${IPMI_BINARY} -H ${IPMI_HOST} -I lanplus -U ${IPMI_USER} -E"
 
-[ -x ${IPMI_BINARY} ] || exit 1
+[ -x ${IPMI_BINARY} ] || echo "${IPMI_BINARY} doesn't have execute permissions" && exit 1
 
-[ -f ${IPMI_PASSWORD_FILE} ] || exit 1
+if [[ -z ${IPMI_HOST} || -z ${IPMI_USER} || -z ${IPMI_PASSWORD} ]]; then echo "Missing one or more environment variables" && exit 1; fi
 
 RETVAL=0
 
@@ -28,7 +28,5 @@ else
 fi
 
 RETVAL=$(($? + $RETVAL))
-
-echo "$(date '+%Y%m%d%H%M%S') $(check)"
 
 exit $RETVAL
