@@ -9,7 +9,7 @@ IPMI_COMMAND="${IPMI_BINARY} -H ${IPMI_HOST} -I lanplus -U ${IPMI_USER} -f ${IPM
 
 [ -x ${IPMI_BINARY} ] || exit 1
 
-[ -x ${IPMI_PASSWORD_FILE} ] || exit 1
+[ -f ${IPMI_PASSWORD_FILE} ] || exit 1
 
 RETVAL=0
 
