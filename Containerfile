@@ -17,4 +17,6 @@ RUN rm -rf /etc/rhsm-host \
     && ln -s /run/secrets/rhsm /etc/rhsm-host
 
 COPY command.sh /command.sh
+COPY fanctl.sh /usr/local/bin/fanctl.sh
+
 ENTRYPOINT ["/command.sh"]
