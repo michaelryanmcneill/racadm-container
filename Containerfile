@@ -17,5 +17,6 @@ RUN rm -rf /etc/rhsm-host \
     && ln -s /run/secrets/rhsm /etc/rhsm-host
 
 COPY fanctl.sh /usr/local/bin/fanctl.sh
+COPY tlsupdate.sh /usr/local/bin/tlsupdate.sh
 
 ENTRYPOINT ["/bin/sh"]
