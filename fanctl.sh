@@ -3,8 +3,9 @@
 MAX_TEMP=77
 GOOD_MSG="(II) Dell Fan Control"
 
+IPMI_BINARY=/usr/bin/ipmitool
 IPMI_PASSWORD_FILE=/run/secrets/idrac/token
-IPMI_COMMAND="/usr/bin/ipmitool -H ${IPMI_HOST} -I lanplus -U ${IPMI_USER} -f ${IPMI_PASSWORD_FILE}"
+IPMI_COMMAND="${IPMI_BINARY} -H ${IPMI_HOST} -I lanplus -U ${IPMI_USER} -f ${IPMI_PASSWORD_FILE}"
 
 [ -x ${IPMI_BINARY} ] || exit 1
 
