@@ -11,8 +11,8 @@ RUN rm -rf /etc/rhsm-host \
     && dnf -y update \
     && dnf -y install openssl openssl-devel pciutils wget OpenIPMI \
     && dnf -y install srvadmin-idracadm7.x86_64 \
-    && update-crypto-policies --set DEFAULT \
     && dnf -y clean all \
+    && update-crypto-policies --set DEFAULT \
     && rm /tmp/bootstrap.cgi \
     && ln -s /run/secrets/rhsm /etc/rhsm-host
 
